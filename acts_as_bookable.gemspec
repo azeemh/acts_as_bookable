@@ -8,9 +8,9 @@ require "acts_as_bookable/version"
 Gem::Specification.new do |gem|
   gem.name        = "acts_as_bookable"
   gem.version     = ActsAsBookable::VERSION
-  gem.authors     = ["Chosko"]
-  gem.email       = ["ruben.caliandro@gmail.com"]
-  gem.homepage    = "https://github.com/tandusrl/acts_as_bookable"
+  gem.authors     = ["Azeem Hussein"]
+  gem.email       = ["Azeem.Hussein@gmail.com"]
+  gem.homepage    = "https://github.com/azeemh/acts_as_bookable"
   gem.summary     = "The reservation engine for Rails applications that allows resources to be booked"
   gem.description = "ActsAsBookable is a reservation engine for Rails applications that allows resources to be booked. You can define availability rules for bookable models and set costraints to implement different types of booking (hotels, theaters, meeting rooms...)"
   gem.licenses    = ["MIT"]
@@ -20,14 +20,14 @@ Gem::Specification.new do |gem|
   gem.test_files    =  gem.files.grep(%r{^spec/})
 
   gem.require_paths = ['lib']
-  gem.required_ruby_version = '>= 2.0.0'
+  gem.required_ruby_version = '>= 2.7.6'
 
   if File.exist?('UPGRADING.md')
     gem.post_install_message = File.read('UPGRADING.md')
   end
 
   gem.add_dependency 'ice_cube', '~> 0.16.3'
-  gem.add_runtime_dependency 'activerecord', ['>= 3.2', '<= 6.1.6.1']
+  gem.add_runtime_dependency 'activerecord', ['>= 5.2']
   
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rails'
